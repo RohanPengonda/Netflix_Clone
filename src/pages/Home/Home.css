@@ -13,7 +13,9 @@
   bottom: 0;
 }
 .caption-img {
-  width: 90%;
+  width: 100%;
+  /* padding-top: 150px;
+  margin-top: 100px; */
   max-width: 420px;
   margin-bottom: 30px;
 }
@@ -69,12 +71,14 @@
     padding-left: 4%;
   }
   .caption-img {
-    margin-bottom: 10px;
-    width: 40%;
+    display: none;
+    /* margin-bottom: 10px;
+    width: 40%; */
   }
   .hero-caption p {
-    font-size: 12px;
-    margin-bottom: 10px;
+    display: none;
+    /* font-size: 12px;
+    margin-bottom: 10px; */
   }
   .hero-btns .btn img {
     width: 20px;

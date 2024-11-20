@@ -1,8 +1,9 @@
 // import React from "react";
 import "./Home.css";
 import Navbar from "../../components/Navbar/Navbar";
-import hero_banner from "../../assets/hero_banner.jpg";
-import hero_title from "../../assets/hero_title.png";
+// import hero_banner from "../../assets/hero_banner.jpg";
+import m_name from "../../assets/name.png";
+import banner from "../../assets/pushpa.jpg";
 import play_icon from "../../assets/play_icon.png";
 import info_icon from "../../assets/info_icon.png";
 import TitleCards from "../../components/TitleCards/TitleCards";
@@ -12,13 +13,14 @@ const Home = () => {
     <div className="home">
       <Navbar />
       <div className="hero">
-        <img src={hero_banner} alt="" className="banner-img" />
+        <img src={banner} alt="" className="banner-img" />
         <div className="hero-caption">
-          <img src={hero_title} alt="" className="caption-img" />
+          <img src={m_name} alt="" className="caption-img" />
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto
-            qui impedit modi excepturi minus laborum asperiores, blanditiis est
-            recusandae hic!
+            Based on the smuggling of red sander trees in Seshachalam <br />
+            forest, Andhra Pradesh, Pushpa tells the story of a lorry driver
+            <br />
+            who is part of the illegal business.
           </p>
           <div className="hero-btns">
             <button className="btn">
