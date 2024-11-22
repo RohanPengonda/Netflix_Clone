@@ -11,6 +11,7 @@ import Footer from "../../components/Footer/Footer";
 const Home = () => {
   return (
     <div className="home">
+      {/* <Navbar title={"Series"} category={"series"} /> */}
       <Navbar />
       <div className="hero">
         <img src={banner} alt="" className="banner-img" />

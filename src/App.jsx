@@ -9,6 +9,9 @@ import { auth } from "./firebase";
 import { useEffect } from "react";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import Movie from "./components/Movie";
+import TvSeries from "./components/TitleCards/TvSeries";
+// import Movie from "./components/Movie";
 
 const App = () => {
   const navigate = useNavigate();
@@ -25,10 +28,12 @@ const App = () => {
   }, []);
   return (
     <div>
+      {/* <Movie /> */}
       <ToastContainer theme="dark" />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<Login />} />
+        <Route path="/tv-series" element={<TvSeries />} />
         <Route path="/player/:id" element={<Player />} />
       </Routes>
     </div>
