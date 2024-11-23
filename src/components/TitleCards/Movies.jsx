@@ -5,32 +5,40 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
 import Navbar from "../../components/Navbar/Navbar";
-const Stars = ({ title, category }) => {
+const Movies = ({ title, category }) => {
   const [apiData, setapiData] = useState([]);
   // For Mouse Wheel Scroll
   // const cardsRef = useRef();
-
+  const url = "https://moviesdatabase.p.rapidapi.com/titles/x/upcoming";
   const options = {
     method: "GET",
     headers: {
-      accept: "application/json",
-      Authorization:
-        "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI3N2QzODRiMjk4ZGU3YjNjMTJkNDk4MzY5MDFhZDIxNiIsIm5iZiI6MTczMjI4MzAyNy44MDQyMTg4LCJzdWIiOiI2NzNjODZjN2U3NzJjY2MxNTY0NTJmMDIiLCJzY29wZXMiOlsiYXBpX3JlYWQiXSwidmVyc2lvbiI6MX0.TbgpYbi3MF1L9wTkJRow6y1UKS0kFnwsFq2v8j7WtP0",
+      "x-rapidapi-key": "Sign Up for Key",
+      "x-rapidapi-host": "moviesdatabase.p.rapidapi.com",
     },
   };
 
-  // const handleWheel = (event) => {
-  //   event.preventDefault();
-  //   cardsRef.current.srollLeft += event.deltaY;
+  // try {
+  //   const response = await fetch(url, options);
+  //   const result = await response.text();
+  //   console.log(result);
+  // } catch (error) {
+  //   console.error(error);
+  // }
+  // console.log(result)
+  // const options = {
+  //   method: "GET",
+  //   headers: {
+  //     accept: "application/json",
+  //     Authorization:
+  //       "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI3N2QzODRiMjk4ZGU3YjNjMTJkNDk4MzY5MDFhZDIxNiIsIm5iZiI6MTczMjI4MzAyNy44MDQyMTg4LCJzdWIiOiI2NzNjODZjN2U3NzJjY2MxNTY0NTJmMDIiLCJzY29wZXMiOlsiYXBpX3JlYWQiXSwidmVyc2lvbiI6MX0.TbgpYbi3MF1L9wTkJRow6y1UKS0kFnwsFq2v8j7WtP0",
+  //   },
   // };
   useEffect(() => {
-    fetch(
-      "https://api.themoviedb.org/3/trending/person/day?language=en-US",
-      options
-    )
+    fetch(url, options)
       .then((res) => res.json())
-      .then((res) => setapiData(res.results))
-      .catch((err) => console.error(err));
+      .then((res) => setapiData(res.results));
+    console.log(result).catch((err) => console.error(err));
   });
 
   //     useEffect(() => {
@@ -68,4 +76,4 @@ const Stars = ({ title, category }) => {
   );
 };
 
-export default Stars;
+export default Movies;

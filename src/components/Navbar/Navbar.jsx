@@ -37,12 +37,12 @@ const Navbar = () => {
             </Link>
           </li>
           <li>
-            <Link to="/tv-series" className="link">
+            <Link to="/movies" className="link">
               Movies
             </Link>
           </li>
           <li>
-            <Link to="/tv-series" className="link">
+            <Link to="/" className="link">
               New & Popular
             </Link>
           </li>
@@ -52,7 +52,7 @@ const Navbar = () => {
             </Link>
           </li>
           <li>
-            <Link to="/tv-series" className="link">
+            <Link to="/" className="link">
               Browse by Language
             </Link>
           </li>

@@ -12,6 +12,7 @@ import "react-toastify/dist/ReactToastify.css";
 import Movie from "./components/Movie";
 import TvSeries from "./components/TitleCards/TvSeries";
 import Stars from "./components/TitleCards/Stars";
+import Movies from "./components/TitleCards/Movies";
 
 // import Movie from "./components/Movie";
 
@@ -37,6 +38,8 @@ const App = () => {
         <Route path="/login" element={<Login />} />
         <Route path="/tv-series" element={<TvSeries />} />
         <Route path="/stars" element={<Stars />} />
+        <Route path="/movies" element={<Movies />} />
+
         <Route path="/player/:id" element={<Player />} />
       </Routes>
     </div>
