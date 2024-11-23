@@ -13,6 +13,12 @@
   );
   z-index: 1;
 }
+.link {
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+  margin: 0 7px;
+}
 .navbar-left {
   display: flex;
   align-items: center;

@@ -11,6 +11,8 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Movie from "./components/Movie";
 import TvSeries from "./components/TitleCards/TvSeries";
+import Stars from "./components/TitleCards/Stars";
+
 // import Movie from "./components/Movie";
 
 const App = () => {
@@ -34,6 +36,7 @@ const App = () => {
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<Login />} />
         <Route path="/tv-series" element={<TvSeries />} />
+        <Route path="/stars" element={<Stars />} />
         <Route path="/player/:id" element={<Player />} />
       </Routes>
     </div>

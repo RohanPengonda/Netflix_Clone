@@ -1,7 +1,6 @@
 // import React from 'react'
 import "./Navbar.css";
 import { Link } from "react-router-dom";
-
 import logo from "../../assets/logo.png";
 import search_icon from "../../assets/search_icon.svg";
 import bell_icon from "../../assets/bell_icon.svg";
@@ -28,15 +27,35 @@ const Navbar = () => {
         <img src={logo} alt="" />
         <ul>
           <li>
-            <Link to="/">Home</Link>
+            <Link to="/" className="link">
+              Home
+            </Link>
           </li>
           <li>
-            <Link to="/tv-series">TV Shows</Link>
+            <Link to="/tv-series" className="link">
+              TV Shows
+            </Link>
           </li>
-          <li>Movies</li>
-          <li>New & Popular</li>
-          <li>My List</li>
-          <li>Browse by Language</li>
+          <li>
+            <Link to="/tv-series" className="link">
+              Movies
+            </Link>
+          </li>
+          <li>
+            <Link to="/tv-series" className="link">
+              New & Popular
+            </Link>
+          </li>
+          <li>
+            <Link to="/stars" className="link">
+              Stars
+            </Link>
+          </li>
+          <li>
+            <Link to="/tv-series" className="link">
+              Browse by Language
+            </Link>
+          </li>
         </ul>
       </div>
       <div className="navbar-right">

@@ -1,5 +1,5 @@
 // import React from "react";
-import "./TvSeries.css";
+import "./Stars.css";
 // import cards_data from "../../assets/cards/Cards_data";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
@@ -9,12 +9,13 @@ const TvSeries = ({ title, category }) => {
   const [apiData, setapiData] = useState([]);
   // For Mouse Wheel Scroll
   // const cardsRef = useRef();
+
   const options = {
     method: "GET",
     headers: {
       accept: "application/json",
       Authorization:
-        "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI3N2QzODRiMjk4ZGU3YjNjMTJkNDk4MzY5MDFhZDIxNiIsIm5iZiI6MTczMjIwMTk4Mi45NTI4OTI4LCJzdWIiOiI2NzNjODZjN2U3NzJjY2MxNTY0NTJmMDIiLCJzY29wZXMiOlsiYXBpX3JlYWQiXSwidmVyc2lvbiI6MX0.Vhseu4GUX5f-L2xPF9Lt8WJXS3egL2RhbyiudYYumIc",
+        "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI3N2QzODRiMjk4ZGU3YjNjMTJkNDk4MzY5MDFhZDIxNiIsIm5iZiI6MTczMjI4MzAyNy44MDQyMTg4LCJzdWIiOiI2NzNjODZjN2U3NzJjY2MxNTY0NTJmMDIiLCJzY29wZXMiOlsiYXBpX3JlYWQiXSwidmVyc2lvbiI6MX0.TbgpYbi3MF1L9wTkJRow6y1UKS0kFnwsFq2v8j7WtP0",
     },
   };
 
@@ -24,7 +25,7 @@ const TvSeries = ({ title, category }) => {
   // };
   useEffect(() => {
     fetch(
-      "https://api.themoviedb.org/3/trending/tv/day?language=en-US",
+      "https://api.themoviedb.org/3/trending/person/day?language=en-US",
       options
     )
       .then((res) => res.json())
@@ -42,20 +43,24 @@ const TvSeries = ({ title, category }) => {
         <h2>Popular on Series</h2>
         <div className="container" /*ref={cardsRef}*/>
           {apiData.map((card, index) => {
-            return (
-              <div className="section" key={index}>
-                <Link to={`/player/${card.id}`} className="card">
-                  <img
-                    src={"https://image.tmdb.org/t/p/w500" + card.backdrop_path}
-                    alt=""
-                  />
-                </Link>
-                <p>{card.name}</p>
+            if (card.gender == 2) {
+              return (
+                <div className="section" key={index}>
+                  <Link to={`/player/${card.id}`} className="card">
+                    <img
+                      src={
+                        "https://image.tmdb.org/t/p/w500" + card.profile_path
+                      }
+                      alt=""
+                    />
+                  </Link>
+                  <p>{card.name}</p>
 
-                {/* <p>Release Date: {card.first_air_date}</p>
+                  {/* <p>Release Date: {card.first_air_date}</p>
                 <p>Rating: {card.vote_average}</p> */}
-              </div>
-            );
+                </div>
+              );
+            }
           })}
         </div>
       </div>
