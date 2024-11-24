@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
 import Navbar from "../../components/Navbar/Navbar";
-const Stars = ({ title, category }) => {
+const Stars = () => {
   const [apiData, setapiData] = useState([]);
   // For Mouse Wheel Scroll
   // const cardsRef = useRef();
