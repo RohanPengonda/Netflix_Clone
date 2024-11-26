@@ -1,5 +1,7 @@
 .titlecards {
-  margin-top: 50px;
+  /* margin-top: 50px; */
+  padding-top: 60px;
+  /* display: flex; */
   margin-bottom: 30px;
 }
 .titlecards h2 {

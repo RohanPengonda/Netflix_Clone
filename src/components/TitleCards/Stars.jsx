@@ -40,7 +40,7 @@ const Stars = () => {
     <div className="hom1">
       <Navbar />
       <div className="stars">
-        <h2>Popular on Series</h2>
+        <h2>Stars </h2>
         <div className="star-container" /*ref={cardsRef}*/>
           {apiData.map((card, index) => {
             if (card.gender == 2) {
