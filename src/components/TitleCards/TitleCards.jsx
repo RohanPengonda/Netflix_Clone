@@ -73,9 +73,9 @@ const TitleCards = ({ title, category }) => {
                 />
                 <p className="title">{card.original_title}</p>
                 <div className="show">
-                  <p className="show1">{card.overview}</p>
-                  <p className="show1">{card.release_date}</p>
-                  <p className="show1">{card.vote_average}</p>
+                  <p className="show1">Summary:- {card.overview}</p>
+                  <p className="show1">Release Date:- {card.release_date}</p>
+                  <p className="show1">Rating:- {card.vote_average}</p>
                 </div>
               </div>
             </Link>
