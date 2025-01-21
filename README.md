@@ -18,6 +18,7 @@ The project also emphasizes responsive design, ensuring compatibility across var
 This project highlights technical skills in React.js, Node.js, MongoDB, Express.js, REST APIs, and cloud technologies while showcasing the ability to work on real-world, user-centric web applications.
 
 **Screens:**
+
 1.Login and Signup Page
 
 
@@ -29,4 +30,11 @@ https://github.com/user-attachments/assets/069465d2-65ac-4d37-a4f0-4b9dd921e231
 ![1 HomePage](https://github.com/user-attachments/assets/563807d9-fc22-4c50-afce-ef65cee713b8)
 
 
-3. 
+3. TV Shows
+
+
+https://github.com/user-attachments/assets/5f7f39b4-cdac-44ec-954f-fed54edea081
+
+
+
+4. 
