@@ -37,4 +37,9 @@ https://github.com/user-attachments/assets/5f7f39b4-cdac-44ec-954f-fed54edea081
 
 
 
-4. 
+4. Stars
+
+
+
+
+5. Play 
